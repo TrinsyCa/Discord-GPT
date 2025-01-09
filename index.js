@@ -86,12 +86,12 @@ client.on('interactionCreate', async (interaction) => {
 **Yanıt sırasında kullanılan token**: ${completionTokens}
         `);
     }
-    
+
     if (interaction.commandName === 'omer') {
         await interaction.reply(`
 **Ömer İslamoğlu Sosyal Medya Hesapları**
 
-- **:Github: GitHub:** [@trinsyca](https://github.com/trinsyca)
+- **GitHub:** [@trinsyca](https://github.com/trinsyca)
 - **Instagram:** [@trinsyca](https://instagram.com/trinsyca)
 - **Twitter:** [@trinsyca](https://twitter.com/trinsyca)
 - **LinkedIn:** [in/trinsyca](https://linkedin.com/in/trinsyca)
