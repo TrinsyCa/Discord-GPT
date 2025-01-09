@@ -67,7 +67,7 @@ client.on('messageCreate', async (message) => {
         });
     });
 
-    const response = openai.chat.completions
+    const response = await openai.chat.completions
     .create({
         model: 'gpt-3.5-turbo',
         messages:conversation,
