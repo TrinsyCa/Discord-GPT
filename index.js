@@ -78,8 +78,8 @@ client.on('interactionCreate', async (interaction) => {
         // Yanıtı düzenle
         await interaction.editReply(`
 **Toplam kullanılan token**: ${totalTokens}
-**İstek (prompt) sırasında kullanılan token**: ${promptTokens}
-**Yanıt (completion) sırasında kullanılan token**: ${completionTokens}
+**İstek sırasında kullanılan token**: ${promptTokens}
+**Yanıt sırasında kullanılan token**: ${completionTokens}
         `);
     }
 });
@@ -118,7 +118,7 @@ client.on('messageCreate', async (message) => {
 
     // Son 30 mesajı çek
     let prevMessages = await message.channel.messages.fetch({ limit: 30 });
-    // Discord en yeni mesajdan en eskiye döndürür.
+    prevMessages.reverse();
 
     prevMessages.forEach((msg) => {
         // Eğer başka bir bot ve bu bot değilse
