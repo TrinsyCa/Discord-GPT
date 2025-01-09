@@ -20,7 +20,6 @@ const CHANNELS = ['1326793797950246922'];
 
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
-    timeout: 10000, // 10 Saniye zaman aşımı
 });
 
 client.on('messageCreate', async (message) => {
