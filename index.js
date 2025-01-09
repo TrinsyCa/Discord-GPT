@@ -68,7 +68,7 @@ client.on('messageCreate', async (message) => {
         });
     });
 
-    const response = await openai.chat.completions
+    const response = openai.chat.completions
     .create({
         model: 'gpt-3.5-turbo',
         messages:conversation,
@@ -80,7 +80,7 @@ client.on('messageCreate', async (message) => {
     clearInterval(sendTypingInterval);
 
     if(!response) {
-        message.reply('OpenAI apisinde bir sorun yaşıyorum. Lütfen daha sonra tekrar dene.');
+        message.reply('OpenAI bağlantısında bir sorun yaşıyorum. Lütfen daha sonra tekrar dene.');
         return;
     }
 
