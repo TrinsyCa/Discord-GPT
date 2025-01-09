@@ -22,6 +22,10 @@ client.on('ready', async () => {
             name: 'tokeninfo',
             description: 'OpenAI API tarafından kullanılan token bilgilerini gösterir',
         },
+        {
+            name: 'omer',
+            description: 'Ömer İslamoğlu sosyal medya hesapları',
+        },
     ];
 
     // Sunucu ID'si (Örnek: "629015691458248709")
@@ -80,6 +84,17 @@ client.on('interactionCreate', async (interaction) => {
 **Toplam kullanılan token**: ${totalTokens}
 **İstek sırasında kullanılan token**: ${promptTokens}
 **Yanıt sırasında kullanılan token**: ${completionTokens}
+        `);
+    }
+    
+    if (interaction.commandName === 'omer') {
+        await interaction.reply(`
+**Ömer İslamoğlu Sosyal Medya Hesapları**
+
+- **:Github: GitHub:** [@trinsyca](https://github.com/trinsyca)
+- **Instagram:** [@trinsyca](https://instagram.com/trinsyca)
+- **Twitter:** [@trinsyca](https://twitter.com/trinsyca)
+- **LinkedIn:** [in/trinsyca](https://linkedin.com/in/trinsyca)
         `);
     }
 });
